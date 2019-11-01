@@ -3,6 +3,7 @@ import About from './About';
 import FaveFood from './FavoriteFood';
 import FaveMovie from './FavoriteMovie';
 import MainBlog from './MainBlog';
+import ShowParam from './ShowParam'
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -27,6 +28,7 @@ function App() {
       <Route exact path="/favefood" render={ (props) => <FaveFood foods={foods} /> }/>
       <Route exact path="/favemovie"  render={ (props) => <FaveMovie movies={movies} /> }/>
       <Route exact path="/mainblog" component={MainBlog}/>
+      <Route exact path="/showparam/:id"  render={ (props) => <ShowParam {...props} /> }/>
     </div>
 
     </Router>
